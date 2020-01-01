@@ -1,34 +1,34 @@
 {% trans_default_domain 'FOSUserBundle' %}
 <div class="container">
     <div class="card card-register mx-auto mt-5">
-        <div class="card-header">Register an Account</div>
+        <div class="card-header">Cr&eacute;er un compte</div>
         <div class="card-body">
             <form class="fos_user_registration_register" action="{{ path("fos_user_registration_register") }}" method="post">
                 <div class="form-group">
-                    <label for="fos_user_registration_form_username">Username</label>
-                    <input type="text" class="form-control" id="fos_user_registration_form_username" name="fos_user_registration_form[username]" required="required" placeholder="Username...">
+                    <label for="fos_user_registration_form_username">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="fos_user_registration_form_username" name="fos_user_registration_form[username]" required="required" placeholder="Nom d'utilisateur...">
                 </div>
                 <div class="form-group">
                     <label for="fos_user_registration_form_email">Email</label>
-                    <input type="email" class="form-control" id="fos_user_registration_form_email" name="fos_user_registration_form[email]" required="required" placeholder="Username...">
+                    <input type="email" class="form-control" id="fos_user_registration_form_email" name="fos_user_registration_form[email]" required="required" placeholder="Email...">
                 </div>
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label for="fos_user_registration_form_plainPassword_first">Password</label>
-                            <input type="password" class="form-control" id="fos_user_registration_form_plainPassword_first" name="fos_user_registration_form[plainPassword][first]" required="required" placeholder="Password..."/>
+                            <label for="fos_user_registration_form_plainPassword_first">Mot de passe</label>
+                            <input type="password" class="form-control" id="fos_user_registration_form_plainPassword_first" name="fos_user_registration_form[plainPassword][first]" required="required" placeholder="Mot de passe..."/>
                         </div>
                         <div class="col-md-6">
-                            <label for="fos_user_registration_form_plainPassword_second">Confirm password</label>
-                            <input type="password" class="form-control" id="fos_user_registration_form_plainPassword_second" name="fos_user_registration_form[plainPassword][second]" required="required" placeholder="Password..."/>
+                            <label for="fos_user_registration_form_plainPassword_second">Confirmez le mot de passe</label>
+                            <input type="password" class="form-control" id="fos_user_registration_form_plainPassword_second" name="fos_user_registration_form[plainPassword][second]" required="required" placeholder="Mot de passe..."/>
                         </div>
                     </div>
                 </div>
                 <input type="hidden" id="fos_user_registration_form__token" name="fos_user_registration_form[_token]" value="{{ form.children._token.vars.value }}">
-                <input type="submit" class="btn btn-primary btn-block" id="_submit" name="_submit" value="Submit" />
+                <input type="submit" class="btn btn-primary btn-block" id="_submit" name="_submit" value="Soumettre" />
             </form><br>
             <div class="text-center">
-                <a class="btn btn-outline-primary btn-block" href="/login">Login Page</a>
+                <a class="btn btn-outline-primary btn-block" href="/login">Page de connexion</a>
             </div>
         </div>
     </div>

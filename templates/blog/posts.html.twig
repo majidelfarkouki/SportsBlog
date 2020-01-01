@@ -18,10 +18,10 @@
                         <div class="card-body">
                            <h3 class="card-title">{{ post.title }}</h3>
                            <p class="card-text">{{ post.description|length > 50 ? post.description|striptags|slice(0, 50) ~ '...' : post.description | raw}}</p>
-                           <a href="/post/{{ post.urlAlias }}" class="btn btn-sm btn-primary">Read More &rarr;</a>
+                           <a href="/post/{{ post.urlAlias }}" class="btn btn-sm btn-primary">Lire la suite &rarr;</a>
                         </div>
                         <div class="card-footer">
-                           <small class="text-muted">Posted on {{ post.published.date | date('d F, Y') }}</small>
+                           <small class="text-muted">Publi&eacute; le {{ post.published.date | date('d F, Y') }}</small>
                         </div>
                      </div>
                   </div>
@@ -29,7 +29,7 @@
                </div>
                {% else %}
                <div class="alert alert-info" role="alert">
-                  There is no article !
+                  Il n'y a pas d'article!
                </div>
                {% endfor %}
             </div>

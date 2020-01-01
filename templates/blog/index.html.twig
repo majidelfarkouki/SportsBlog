@@ -1,25 +1,24 @@
 {% extends 'base.html.twig' %}
-{% block menu %}{% include ("Includes/menu.html.twig") %}{% endblock %}
 {% block body %}
 <div class="col-lg-12 mg-t-20 mg-lg-t-0">
    <div class="section-wrapper">
-      <label class="section-title">Our most recent articles</label>
+      <label class="section-title">Articles r&eacute;cents</label>
       <!-- Blog Post -->
       {% for post in posts %}
       <div class="card">
          <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
             <p class="card-text">{{ post.description|length > 250 ? post.description|striptags|slice(0, 250) ~ '...' : post.description|raw}}</p>
-            <a href="/post/{{ post.urlAlias }}" class="btn btn-sm btn-primary">Read More &rarr;</a>
+            <a href="/post/{{ post.urlAlias }}" class="btn btn-sm btn-primary">Lire la suite &rarr;</a>
          </div>
          <div class="card-footer text-muted">
-            Posted on {{ post.published.date | date('d F, Y') }}
+            Publi&eacute; le {{ post.published.date | date('d F, Y') }}
          </div>
       </div>
       <br>
       {% else %}
       <div class="alert alert-info" role="alert">
-         There is no article !
+         Il n'y a pas d'article!      
       </div>
       {% endfor %}
    </div>

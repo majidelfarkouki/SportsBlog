@@ -5,15 +5,15 @@
    <div class="section-wrapper">
       {{ form_start(form) }}
       {{ form_errors(form) }}
-      <label class="section-title">Create new post</label>
+      <label class="section-title">Cr&eacute;er un nouvel article</label>
       <!-- <p class="mg-b-20 mg-sm-b-40">A basic form where labels are aligned in right.</p> -->
       <div class="form-layout form-layout-5">
          <div class="form-group">
-            <label for="exampleInputTitle">Title</label>
+            <label for="exampleInputTitle">Titre</label>
             {{ form_widget(form.title, {'attr': {'class': 'form-control', 'id': 'exampleInputTitle' ,'placeholder': ""}}) }}
          </div>
          <div class="form-group">
-            <label for="exampleInputContent">Content (in HTML)</label>
+            <label for="exampleInputContent">Contenu</label>
             {{ form_widget(form.description, {'attr': {'class': 'form-control', 'id': 'exampleInputContent', 'placeholder': ""}}) }}
          </div>
          <div class="row mg-t-30" align="center">
