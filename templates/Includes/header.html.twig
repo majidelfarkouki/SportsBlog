@@ -1,0 +1,24 @@
+<div class="slim-header">
+   <div class="container"  style="max-width: 75% !important;">
+      <div class="slim-header-left">
+         <h2 class="slim-logo">SPORTSBLOG</a></h2>
+      </div>
+      <div class="slim-header-right">
+         {% if app.user %}
+         <a href="#" class="nav-link">
+         <span>{{ app.user.username }}</span>
+         <i class="icon ion-arrow-down-b"></i>
+         </a>
+         <a href="/new" class="nav-link"><i class="icon ion-ios-plus"></i> New post</a>
+         <a href="/logout" title="Sign out" class="nav-link"><i class="icon ion-log-out"></i> Logout</a>
+         {% else %}
+         <a class="nav-link" href="/login" title="Sign in">
+         <i class="icon ion-log-in"></i>
+         </a>
+         <a class="nav-link" href="/register" title="Register you">
+         <i class="icon ion-plus-circled"></i>
+         </a>
+         {% endif %}
+      </div>
+   </div>
+</div>

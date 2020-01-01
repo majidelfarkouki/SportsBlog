@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %} {% block title %}{{ posts[0].title }} | SportsBlog{% endblock %} 
+{% block body %}
+<div class="card card-dash-chart-one ">
+   <div class="row no-gutters">
+      <div class="col-lg-8">
+         <div class="left-panel" id="info">
+            <article>
+               <!-- Title -->
+               <h1 class="mt-4">{{ posts[0].title }}</h1>
+               <hr>
+               <!-- Date/Time -->
+               <p>
+                  Posted on {{ posts[0].published.date | date('d F, Y', 'Europe/Paris') }} at {{ posts[0].published.date | date('H:m', "Europe/Paris") }}
+               </p>
+               <hr>
+               <!-- Post Content -->
+               {{ posts[0].description | raw}}
+            </article>
+         </div>
+         <!-- left-panel -->
+      </div>
+      {% if app.user %}
+      <!-- col-4 -->
+      <div class="col-lg-4">
+         <div class="right-panel">
+            <h6 class="slim-card-title">Administration</h6>
+            <div class="card-body text-center">
+               <a href="/edit/{{ posts[0].urlAlias }}" class="btn btn-sm btn-primary" title="Edit">
+               <i class="icon ion-edit"></i> Edit</a>
+               <button class="btn btn-sm btn-danger" title="Delete" data-toggle="modal" data-target="#validationModal">
+               <i class="icon ion-trash-b"></i> Delete</button>
+            </div>
+         </div>
+         <!-- right-panel -->
+      </div>
+      {% endif %}
+      <!-- col-8 -->
+   </div>
+   <!-- row -->
+</div>
+<!-- card -->
+<!-- Modal -->
+<div class="modal" id="validationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete this post?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            Do you really want to delete this post?
+         </div>
+         <div class="modal-footer">                    
+            <a class="btn btn-sm btn-danger" href="/delete/{{ posts[0].id }}">Delete this post</a>
+            <button type="button" class="btn btn-sm btn-warning" data-dismiss="modal">Cancel</button>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+<script>
+   $(document).ready(function () {
+              $("[id*=1]").removeClass('active');
+              $("[id*=2]").addClass('active');
+          });
+</script>
+{% endblock %}

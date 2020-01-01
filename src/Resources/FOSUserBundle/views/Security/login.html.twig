@@ -1,0 +1,15 @@
+{% extends "@FOSUser/layout.html.twig" %}
+{% block title %}Login | SportsBlog{% endblock %}
+{% block fos_user_content %}
+{{ include('@FOSUser/Security/login_content.html.twig') }}
+{% endblock fos_user_content %}
+
+{% block javascripts %}
+             {{ parent() }}
+<script>
+ $(document).ready(function () {
+            $("[id*=1]").removeClass('active');
+            $("[id*=2]").removeClass('active');
+        });
+</script>
+{% endblock %}

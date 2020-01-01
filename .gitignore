@@ -1,0 +1,8 @@
+### Ignore what is contained in a directory
+### Example the vendor folder
+/var/
+/vendor/
+
+### The change made to a file
+### Example the .env environment file
+###.env
