@@ -4,8 +4,8 @@ Blog project created by : Abdelmajid EL FARKOUKI and Mouad EL HAMMOUNI
 # Démonstartion
 https://elfarkouki-elhammouni-blog.herokuapp.com/
 ## Compte pour tester l'application :
-### Username : maji
-### Password : 1997
+### Username : admin
+### Password : 1234
 
 # Les Fonctionnalités
 ## Créer un compte utilisateur
@@ -28,4 +28,6 @@ https://elfarkouki-elhammouni-blog.herokuapp.com/
 ## ![](images/9.PNG)
 ## ![](images/10.PNG)
 ## ![](images/11.PNG)
+## App Mobile
+###IphoneX
 ## ![](images/12.PNG)
