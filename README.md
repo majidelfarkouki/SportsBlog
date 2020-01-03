@@ -14,7 +14,7 @@ https://elfarkouki-elhammouni-blog.herokuapp.com/
 ## Supprimer un article
 
 # Contenu:
-2 Controllers and 5 Actions
+2 Controllers
 ## BlogController
 ### IndexAction => Page d'accueil
 ### PostAction => Afficher l'article
