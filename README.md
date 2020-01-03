@@ -14,11 +14,14 @@ https://elfarkouki-elhammouni-blog.herokuapp.com/
 ## Supprimer un article
 
 # Contenu:
-## IndexAction => Page d'accueil
-## PostAction => Afficher l'article
-## NewAction => Ajouter
-## EditAction => Modifier
-## DeleteAction => Supprimer
+2 Controllers and 5 Actions
+## BlogController
+### IndexAction => Page d'accueil
+### PostAction => Afficher l'article
+## CRUDController
+### NewAction => Ajouter
+### EditAction => Modifier
+### DeleteAction => Supprimer
 
 # Screenshots
 ## ![](images/5.PNG)
